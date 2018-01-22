@@ -50,27 +50,26 @@ export default {
       }
     },
     register: function () {
-      this.$router.push({name: 'Cards'})
+      this.$router.push({ name: 'Cards' })
     }
   }
 }
-
 </script>
 
 <style lang="less">
-.container{
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-      -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 header {
   text-align: center;
@@ -82,10 +81,10 @@ header {
 
 ul {
   width: 100%;
-  margin-top:20px;
+  margin-top: 20px;
   li {
     width: 100%;
-    padding:5px;
+    padding: 5px;
     display: flex;
     input {
       width: 100%;
@@ -93,9 +92,9 @@ ul {
       padding-left: 7px;
       padding-right: 7px;
       font-size: 14px;
-      border-color:#fff;
+      border-color: #fff;
       border-radius: 5px;
-      border-color:rgba(0, 0, 0, 0.2);
+      border-color: rgba(0, 0, 0, 0.2);
       border-width: 1px;
       border-style: solid;
       -webkit-appearance: none;
@@ -103,21 +102,21 @@ ul {
       // -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px;
       // -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px;
     }
-    input[name="txt-phone"]{
+    input[name="txt-phone"] {
       width: 100%;
     }
-    input[name="submit"]{
-      background-color:#0099FF;
+    input[name="submit"] {
+      background-color: #0099ff;
       color: #fff;
-      border:none;
+      border: none;
     }
-    input[name="submit"]:active{
-      background-color: #0066FF;
+    input[name="submit"]:active {
+      background-color: #0066ff;
     }
-    button[name="btn-code"]{
-      background-color: #0066FF;
-      color:#fff;
-      border:none;
+    button[name="btn-code"] {
+      background-color: #0066ff;
+      color: #fff;
+      border: none;
       width: 100%;
       height: 40px;
       padding-left: 7px;
@@ -125,24 +124,24 @@ ul {
       font-size: 14px;
       border-radius: 5px;
     }
-    button[name="btn-code"]:active{
+    button[name="btn-code"]:active {
       background-color: gray;
     }
   }
 }
 
-footer{
+footer {
   text-align: center;
-  color:rgba(0, 0, 0, 0.5);
-  font-size:11px;
-  margin-top:100px;
-  hr{
-    margin-top:5px;
-    margin-bottom:5px;
-    border-color:rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 11px;
+  margin-top: 100px;
+  hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-color: rgba(0, 0, 0, 0.1);
   }
 }
-.disabledBtn{
-  background-color: gray!important;
+.disabledBtn {
+  background-color: gray !important;
 }
 </style>
