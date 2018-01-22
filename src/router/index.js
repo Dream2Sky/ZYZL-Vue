@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Index from '@/modules/Index'
 import Register from '@/modules/Register'
 import CardList from '@/modules/Cards'
 
@@ -9,9 +10,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Register,
+      component: Index,
       meta: {
-        title: '注册'
+        title: '首页'
       }
     },
     {
