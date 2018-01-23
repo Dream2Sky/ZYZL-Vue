@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header>
-      <img src="./../assets/zyzl_logo.jpg">
+      手机号注册
     </header>
     <ul>
       <li class="li-phone">
@@ -57,12 +57,17 @@ export default {
 </script>
 
 <style lang="less">
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  border:1px solid gray;
+  
+}
 header {
   text-align: center;
-  img {
-    width: 35%;
-    margin-top: 50px;
-  }
 }
 
 ul {
