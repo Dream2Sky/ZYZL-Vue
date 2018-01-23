@@ -14,7 +14,7 @@ export default {
 
 <style>
 body{
-  background-color: #fff;
+  background-color: #eee;
 }
 /* 开始过渡阶段,动画出去阶段 */
 .fade-enter-active{
