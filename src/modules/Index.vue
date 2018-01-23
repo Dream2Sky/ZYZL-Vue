@@ -10,7 +10,7 @@
           <i class="icon-zyzl icon-goumaiyemiande-xiaogouwuche"></i>
         </div>
       </div> -->
-      <div class="card card-buy">
+      <div class="card card-buy" @click="redirect('/buy')">
         <div class="card-left">
           <i class="icon-zyzl icon-goumaiyemiande-xiaogouwuche"></i>
         </div>
@@ -18,7 +18,7 @@
           流量卡新购
         </div>
       </div>
-            <div class="card card-check">
+            <div class="card card-check"  @click="redirect('/check')">
         <div class="card-left">
           <i class="icon-zyzl icon-chaxun"></i>
         </div>
@@ -26,7 +26,7 @@
           流量查询
         </div>
       </div>
-            <div class="card card-pay">
+            <div class="card card-pay"  @click="redirect('/pay')">
         <div class="card-left">
           <i class="icon-zyzl icon-chongzhi"></i>
         </div>
@@ -34,7 +34,7 @@
           充值
         </div>
       </div>
-            <div class="card card-register">
+            <div class="card card-register" @click="redirect('/register')">
         <div class="card-left">
           <i class="icon-zyzl icon-zhuce"></i>
         </div>
@@ -51,7 +51,12 @@
 
 <script>
 export default {
-  name: 'Index'
+  name: 'Index',
+  methods: {
+    redirect: function (page) {
+      this.$router.push(page)
+    }
+  }
 }
 </script>
 
