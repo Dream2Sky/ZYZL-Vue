@@ -64,7 +64,7 @@ export default {
 }
 header {
   text-align: center;
-  height: 10rem;
+  height: 13rem;
   width:100%;
   background-color:rgb(0, 153, 255);
   display: -webkit-flex; /* Safari */
