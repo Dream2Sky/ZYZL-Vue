@@ -8,7 +8,6 @@ import 'vue-ydui/dist/ydui.rem.css'
 import 'vue-ydui/dist/ydui.base.css'
 import axios from 'axios'
 import wechatTitle from 'vue-wechat-title'
-import '../src/assets/iconfonts/icon-zyzl.css'
 import '../src/assets/iconfonts/icon-register.css'
 
 Vue.config.productionTip = false

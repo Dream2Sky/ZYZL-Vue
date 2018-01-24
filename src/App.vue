@@ -16,6 +16,10 @@ export default {
 body{
   background-color: #eee;
 }
+input[type=button], input[type=submit], input[type=file],button{
+  cursor: pointer;
+  -webkit-appearance: none;
+}
 /* 开始过渡阶段,动画出去阶段 */
 .fade-enter-active{
   transition: all 0.3s;

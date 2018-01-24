@@ -1,0 +1,19 @@
+
+@font-face {font-family: "icon-index";
+  src: url('icon-index.ttf?t=1516807303261') format('truetype');
+}
+
+.icon-index {
+  font-family:"icon-index" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-msnui-gift-bold:before { content: "\e69e"; }
+
+.icon-taocan:before { content: "\e63b"; }
+
+.icon-qian:before { content: "\e608"; }
+

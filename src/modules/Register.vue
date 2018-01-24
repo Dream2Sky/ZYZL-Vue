@@ -1,5 +1,13 @@
 <template>
   <div class="container">
+    <header>
+      <img src="../assets/webwxgeticon.jpeg" alt="">
+    </header>
+    <div class="div-splitter">
+      <div class="div-splitter-line"></div>
+      <label>输入手机号码注册</label>
+      <div class="div-splitter-line"></div>
+    </div>
     <ul>
       <li class="li-phone">
         <i class="icon-register icon-yonghu"></i>
@@ -52,24 +60,46 @@ export default {
 <style lang="less" scoped>
 .container{
   text-align: center;
-  height: 14rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  header{
+    padding:2rem 0;
+    img{
+      height: 4.5rem;
+      width: 4.5rem;
+      background-color: #fff;
+      border:none;
+      border-radius: 50%;
+    }
+  }
+  .div-splitter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#BBBBBB;
+    .div-splitter-line{
+      height: 1px;
+      width: 2.5rem;
+      border:none;
+      background-color: #BBBBBB;
+    }
+  }
 }
 ul {
   width: 100%;
   margin-top: 20px;
+  margin-bottom:20px;
   background-color: #fff;
   border: none;
   li {
     width: 100%;
     padding: 5px;
     display: flex;
-    justify-content: cneter;
+    justify-content:space-between;
     align-items: center;
-    border: 1px solid #bbb;
+    border:.5px solid #bbb;
     border-left: none;
     border-right: none;
     i {
@@ -80,10 +110,10 @@ ul {
     }
     input {
       height: 3rem;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color:#999999;
       border: none;
-      -webkit-appearance: none;
+      flex-grow: 1;
       // box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px;
       // -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px;
       // -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px;
