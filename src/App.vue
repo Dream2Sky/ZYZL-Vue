@@ -6,7 +6,7 @@
     <div class="navbar">
       <ul>
         <li v-for="(item, index) in navList" v-bind:key="item" @click="changeNav(index,item.page)" :class="{'active':ind===index}">
-          <i :class="['icon-nav',item.class]"></i>
+          <i :class="['icon-nav',item.class,{'i-active':ind===index}]"></i>
           {{item.name}}</li>
       </ul>
     </div>
@@ -33,7 +33,7 @@ export default {
         {
           'name': '个人中心',
           'class': 'icon-user',
-          'page': 'PersonalCenter'
+          'page': 'Register'
         }
       ],
       ind: 0
@@ -53,11 +53,15 @@ export default {
   background-color: #fff;
   color:#0099FF;
 }
+.i-active{
+  color:#0099FF!important;
+}
 body {
-  background-color: #fff;
+  background-color: rgba(238, 238, 238, .4);
 }
 .navbar {
   width: 100%;
+  height: 3.1rem;
   position: fixed !important;
   bottom: 0;
   border-top: 1px solid #bbb;
@@ -67,22 +71,21 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 100%;
     li {
       width: 33.33%;
+      height: 100%;
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       padding: 0.5rem 0;
       i {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        color:#999999;
       }
     }
   }
-input[type=button], input[type=submit], input[type=file],button{
-  cursor: pointer;
-  -webkit-appearance: none;
-}
 /* 开始过渡阶段,动画出去阶段 */
 .fade-enter-active {
   transition: all 0.3s;
@@ -95,4 +98,10 @@ input[type=button], input[type=submit], input[type=file],button{
 .fade-leave-active {
   opacity: 0;
 }}
+</style>
+<style>
+button,html input[type="button"],input[type="reset"],input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer
+}
 </style>

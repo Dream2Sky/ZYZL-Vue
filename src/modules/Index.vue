@@ -33,25 +33,11 @@
     <div class="content">
       <div class="div-content content-left">
         <ul>
-          <li>
-            <i class="icon-index icon-qian"></i>
+          <li v-for="(item, index) in items" v-bind:key="item" @click="GotoBiz(index,item.page)" :class="{'li-active':ind===index}">
+            <i :class="['icon-index', item.icon]"></i>
             <div class="li-content">
-              <div class="li-title">流量充值</div>
-              <div class="li-desc">马上充值，享受9.5折</div>
-            </div>
-          </li>
-          <li>
-            <i class="icon-index icon-taocan"></i>
-            <div class="li-content">
-              <div class="li-title">套餐办理</div>
-              <div class="li-desc">查看更多优惠套餐</div>
-            </div>
-          </li>
-          <li>
-            <i class="icon-index icon-msnui-gift-bold"></i>
-            <div class="li-content">
-              <div class="li-title">流量赠送</div>
-              <div class="li-desc">小伙伴流量不够用啦！</div>
+              <div class="li-title">{{item.title}}</div>
+              <div class="li-desc">{{item.desc}}</div>
             </div>
           </li>
         </ul>
@@ -61,8 +47,15 @@
       </div>
     </div>
     <div class="div-ad">
-      <div class="div-header"></div>
+      <div class="div-ad-header">
+        最新活动
+      </div>
+      <div class="div-ad-content">
+        <a href=""><img src="" alt=""></a>
+      </div>
     </div>
+    <footer>
+    </footer>
   </div>
 </template>
 
@@ -70,7 +63,37 @@
 import '../assets/iconfonts/icon-index.css'
 export default {
   name: 'Index',
-  methods: {}
+  data () {
+    return {
+      ind: 0,
+      items: [
+        {
+          'title': '流量充值',
+          'desc': '马上充值，享受9.5折',
+          'icon': 'icon-qian',
+          'page': ''
+        },
+        {
+          'title': '套餐办理',
+          'desc': '查看更多优惠套餐',
+          'icon': 'icon-taocan',
+          'page': ''
+        },
+        {
+          'title': '流量赠送',
+          'desc': '小伙伴流量不够用啦！',
+          'icon': 'icon-msnui-gift-bold',
+          'page': ''
+        }
+      ]
+    }
+  },
+  methods: {
+    GotoBiz: function (index, page) {
+      this.ind = index
+      this.$router.push(page)
+    }
+  }
 }
 </script>
 
@@ -137,11 +160,11 @@ header {
   .content-left{
     ul{
       height: 12rem;
-      border-bottom:1px solid #BBBBBB;
-      border-right:1px solid #bbb;
+      border-bottom:1px solid #eee;
+      border-right:1px solid #eee;
       li{
         height: 4rem;
-        border-bottom:1px solid #BBBBBB;
+        border-bottom:1px solid #eee;
         display: flex;
         align-items:center;
         padding:.5rem .5rem;
@@ -165,10 +188,10 @@ header {
         .li-content{
           padding-left:5px;
           .li-title{
-            font-size: 15px;
+            font-size: .95rem;
           }
           .li-desc{
-            font-size: 9px;
+            font-size: .6rem;
             color:#666666;
           }
         }
@@ -180,11 +203,45 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom:1px solid #bbb;
+    border-bottom:1px solid #eee;
     img{
       width: 10rem;
       height: 10rem;
     }
+  }
+}
+.div-ad{
+  width: 100%;
+  margin-top:1rem;
+  background-color: #fff;
+  .div-ad-header{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    padding-left:1rem;
+    border:1px solid #eee;
+    font-size: .9rem;
+  }
+  .div-ad-content{
+    height: 6rem;
+    background-color: #3399FF;
+    border-bottom:1px solid #eee;
+  }
+}
+.li-active{
+  background-color: #fff;
+}
+footer{
+  height: 5rem;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 7rem;
+  hr{
+    width: 100%;
   }
 }
 .btn-pay {
