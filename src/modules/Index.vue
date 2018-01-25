@@ -26,7 +26,7 @@
                     fill-color="#EAEAEA">50%</yd-progressbar> -->
         </div>
         <div class="div-pay">
-            <button class="btn-pay">添加新卡</button>
+            <button class="btn-pay" @click="GotoBiz(0,'Bind')">添加新卡</button>
         </div>
       </div>
     </header>

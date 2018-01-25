@@ -5,6 +5,7 @@ import Register from '@/modules/Register'
 import Pay from '@/modules/Pay'
 import Buy from '@/modules/Buy'
 import Check from '@/modules/Check'
+import Bind from '@/modules/Bind'
 
 Vue.use(Router)
 
@@ -54,6 +55,14 @@ export default new Router({
       component: Pay,
       meta: {
         title: '充值'
+      }
+    },
+    {
+      path: '/Bind',
+      name: 'Bind',
+      component: Bind,
+      meta: {
+        title: '物联卡绑定'
       }
     }
   ]
