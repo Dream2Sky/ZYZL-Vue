@@ -18,7 +18,7 @@ export default new Router({
       }
     },
     {
-      path: '/Inde',
+      path: '/Index',
       component: Index,
       meta: {
         title: '首页'
