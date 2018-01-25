@@ -1,24 +1,25 @@
 <template>
   <div class="container">
     <header>
-      手机号注册
+      <img src="../assets/webwxgeticon.jpeg" alt="">
     </header>
+    <div class="div-splitter">
+      <div class="div-splitter-line"></div>
+      <label>输入手机号码注册</label>
+      <div class="div-splitter-line"></div>
+    </div>
     <ul>
       <li class="li-phone">
+        <i class="icon-register icon-yonghu"></i>
         <input name="txt-phone" type="number" placeholder="请输入手机号">
       </li>
       <li class="li-code">
+        <i class="icon-register icon-yanzhengma"></i>
         <input name="txt-code" type="number" placeholder="请输入验证码">
-        <button name="btn-code" type="button" v-on:click="getCode" v-bind:class="{'disabledBtn':isGetCode}" :disabled="isGetCode">{{!isGetCode?'点击获取验证码':count +' s后可重新获取'}}</button>
-      </li>
-      <li>
-        <input type="button" name="submit" value="注册" @click="register">
+        <button name="btn-code" type="button" v-on:click="getCode" v-bind:class="{'disabledBtn':isGetCode}" :disabled="isGetCode">{{!isGetCode?'获取验证码':'('+count +') s'}}</button>
       </li>
     </ul>
-    <footer>
-      <hr>
-      <p>Copyright © 2018 众云众联 </p>
-    </footer>
+    <input type="button" name="submit" value="注册" @click="register">
   </div>
 </template>
 
@@ -56,71 +57,95 @@ export default {
 }
 </script>
 
-<style lang="less">
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+<style lang="less" scoped>
 .container{
-  border:1px solid gray;
-  
-}
-header {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  header{
+    padding:2rem 0;
+    img{
+      height: 4.5rem;
+      width: 4.5rem;
+      background-color: #fff;
+      border:none;
+      border-radius: 50%;
+    }
+  }
+  .div-splitter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#BBBBBB;
+    .div-splitter-line{
+      height: 1px;
+      width: 2.5rem;
+      border:none;
+      background-color: #BBBBBB;
+    }
+  }
 }
-
 ul {
   width: 100%;
   margin-top: 20px;
+  margin-bottom:20px;
+  background-color: #fff;
+  border: none;
   li {
     width: 100%;
     padding: 5px;
     display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border:.5px solid #bbb;
+    border-left: none;
+    border-right: none;
+    i {
+      width: 3rem;
+      font-size: 1.6rem;
+      text-align: center;
+      color: #999999;
+    }
     input {
-      width: 100%;
-      height: 40px;
-      padding-left: 7px;
-      padding-right: 7px;
-      font-size: 14px;
-      border-color: #fff;
-      border-radius: 5px;
-      border-color: rgba(0, 0, 0, 0.2);
-      border-width: 1px;
-      border-style: solid;
-      -webkit-appearance: none;
+      height: 3rem;
+      font-size: 1rem;
+      color:#999999;
+      border: none;
+      flex-grow: 1;
       // box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px;
       // -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px;
       // -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px;
     }
-    input[name="txt-phone"] {
-      width: 100%;
-    }
-    input[name="submit"] {
-      background-color: #0099ff;
+    button[name='btn-code'] {
+      background-color: #3399ff;
       color: #fff;
       border: none;
+      height: 2.5rem;
+      width:6rem;
+      font-size: 0.9rem;
     }
-    input[name="submit"]:active {
-      background-color: #0066ff;
-    }
-    button[name="btn-code"] {
-      background-color: #0066ff;
-      color: #fff;
-      border: none;
-      width: 100%;
-      height: 40px;
-      padding-left: 7px;
-      padding-right: 7px;
-      font-size: 14px;
-      border-radius: 5px;
-    }
-    button[name="btn-code"]:active {
+    button[name='btn-code']:active {
       background-color: gray;
     }
   }
+  .li-code {
+    border-top: none;
+  }
 }
-
+input[name='submit'] {
+  background-color: #FF9933;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  width: 80%;
+  height: 3rem;
+  font-size: 1.1rem;
+}
+input[name='submit']:active {
+  background-color: #FF9933;
+}
 footer {
   text-align: center;
   color: rgba(0, 0, 0, 0.5);

@@ -1,0 +1,19 @@
+
+@font-face {font-family: "icon-register";
+  src: url('icon-register.ttf?t=1516717441691') format('truetype');
+}
+
+.icon-register {
+  font-family:"icon-register" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mima:before { content: "\e620"; }
+
+.icon-yanzhengma:before { content: "\e615"; }
+
+.icon-yonghu:before { content: "\e697"; }
+
