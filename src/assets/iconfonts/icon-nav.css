@@ -1,0 +1,19 @@
+
+@font-face {font-family: "icon-nav";
+  src: url('icon-nav.ttf?t=1516854180097') format('truetype');
+}
+
+.icon-nav {
+  font-family:"icon-nav" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before { content: "\e64f"; }
+
+.icon-user:before { content: "\e610"; }
+
+.icon-yduifaxian:before { content: "\e67f"; }
+
