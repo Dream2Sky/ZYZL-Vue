@@ -6,6 +6,7 @@ import Pay from '@/modules/Pay'
 import Buy from '@/modules/Buy'
 import Check from '@/modules/Check'
 import Bind from '@/modules/Bind'
+import FlowDetail from '@/modules/FlowDetail'
 
 Vue.use(Router)
 
@@ -63,6 +64,14 @@ export default new Router({
       component: Bind,
       meta: {
         title: '物联卡绑定'
+      }
+    },
+    {
+      path: '/FlowDetail',
+      name: 'FlowDetail',
+      component: FlowDetail,
+      meta: {
+        title: '流量卡明細'
       }
     }
   ]
