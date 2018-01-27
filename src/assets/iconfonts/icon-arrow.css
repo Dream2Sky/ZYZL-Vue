@@ -1,0 +1,15 @@
+
+@font-face {font-family: "icon-arrow";
+  src:url('icon-arrow.ttf?t=1517044297514') format('truetype');
+}
+
+.icon-arrow {
+  font-family:"icon-arrow" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jiantouarrow487:before { content: "\e6ab"; }
+

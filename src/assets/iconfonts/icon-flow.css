@@ -1,0 +1,25 @@
+
+@font-face {font-family: "icon-flow";
+  src:url('icon-flow.ttf?t=1517040420469') format('truetype'); 
+}
+
+.icon-flow {
+  font-family:"icon-flow" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 流量卡套餐 */
+.icon-flow-taocan:before { content: "\e695"; }
+
+/* 箭头向下 */
+.icon-iconset0413:before { content: "\e724"; }
+
+/* 箭头向上 */
+.icon-iconset0414:before { content: "\e725"; }
+
+/* 流量包 */
+.icon-liuliangquan:before { content: "\e748"; }
+

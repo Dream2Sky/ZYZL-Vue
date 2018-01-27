@@ -76,7 +76,7 @@ export default {
         {
           'title': '套餐办理',
           'desc': '查看更多优惠套餐',
-          'icon': 'icon-taocan',
+          'icon': 'icon-index-taocan',
           'page': ''
         },
         {
@@ -179,7 +179,7 @@ header {
         .icon-qian{
           background-color: #FFCC66;
         }
-        .icon-taocan{
+        .icon-index-taocan{
           background-color: #66CCCC;
         }
         .icon-msnui-gift-bold{
